@@ -14,14 +14,13 @@
 
 void	*ft_calloc(size_t count, size_t size)
 {
-	int		byte;
+	size_t	byte;
 	void	*str;
 
 	byte = count * size;
 	str = (char *)malloc(byte);
 	if (!str)
 		return (NULL);
-	while (byte > 0)
-		((char *)str)[--byte] = 0;
+	ft_bzero(str, byte);
 	return (str);
 }
