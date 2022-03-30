@@ -6,13 +6,13 @@
 /*   By: psuanpro <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/21 14:23:49 by psuanpro          #+#    #+#             */
-/*   Updated: 2022/03/24 23:16:42 by psuanpro         ###   ########.fr       */
+/*   Updated: 2022/03/27 22:20:01 by psuanpro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_countword(char const *s, char c)
+static	size_t	ft_countword(char const *s, char c)
 {
 	int	i;
 	int	j;
@@ -30,7 +30,7 @@ size_t	ft_countword(char const *s, char c)
 	return (j + 1);
 }
 
-size_t	ft_countcword(char const *s, char c)
+static	size_t	ft_countcword(char const *s, char c)
 {
 	size_t	i;
 	size_t	j;
@@ -54,7 +54,7 @@ size_t	ft_countcword(char const *s, char c)
 	return (j + 1);
 }
 
-char	*ft_getword(char const *s, char c)
+static	char	*ft_getword(char const *s, char c)
 {
 	char	*str;
 
